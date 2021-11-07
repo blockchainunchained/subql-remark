@@ -3,6 +3,6 @@ import {RemarkEntity} from "../types";
 
 export async function handleCall(extrinsic: SubstrateExtrinsic): Promise<void> {
     const record = await RemarkEntity.get(extrinsic.block.block.header.hash.toString());
-    record.remark = extrinsic.extrinsic.args["_remark"]
+    record.remark = extrinsic.extrinsic.args["_remark"].toString()
     await record.save();
 }
