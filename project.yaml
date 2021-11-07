@@ -3,12 +3,12 @@ description: ''
 repository: https://github.com/blockchainunchained/subql-remark
 schema: ./schema.graphql
 network:
-  endpoint: wss://polkadot.api.onfinality.io/public-ws
+  endpoint: wss://kusama.api.onfinality.io/public-ws
   dictionary: https://api.subquery.network/sq/subquery/dictionary-polkadot
 dataSources:
   - name: main
     kind: substrate/Runtime
-    startBlock: 1
+    startBlock: 6905646
     mapping:
       handlers:
         - handler: handleCall
